@@ -1,0 +1,9 @@
+version: "3.1"
+
+services:
+  consulti-template-nodejs:
+    image: erickespinozat/consulti-template-nodejs
+    container_name: consulti-template-nodejs
+    restart: unless-stopped
+    ports:
+      - "8080:8080"

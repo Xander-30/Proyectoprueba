@@ -1,0 +1,20 @@
+name: NodeJs CI with Docker
+
+on:
+  push:
+    branches: [cicd]
+  pull_request:
+    branches: [cicd]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build and Push Docker Image of branche
+        uses: mr-smithers-excellent/docker-build-push@v4
+        with:
+          image: erickespinozat/consulti-template-nodejs
+          registry: docker.io
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
