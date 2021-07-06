@@ -12,6 +12,6 @@ app.listen(port, function () {
 
 /*Se obtiene una respuesta del servidor para ver si hay conexion      "" significa que esta en la misma ruta de mi carpeta views*/     
 app.get("", function (req, res) {
-  res.send('<h1>Hello alexander herrera del valle </h1>!');
+  res.send('<h1>Hello alex herrera del valle </h1>!');
   
 });
